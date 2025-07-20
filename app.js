@@ -2,7 +2,7 @@ const express = require('express')
 const { createProxyMiddleware } = require('http-proxy-middleware');
 const app = express()
 const port = process.env.PORT || 9017
-const target = process.env.TARGET || 'https://api.openai.com'
+const target = process.env.TARGET || 'https://generativelanguage.googleapis.com/v1beta/openai'
 
 app.use('/', createProxyMiddleware({
     target: target,
